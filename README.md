@@ -27,13 +27,11 @@ It demonstrates integration of:
 
 ### Resume Ranking Interface
 
-Here is the screenshot of the UI of my project :
-
-```
+Here is the screenshot of the UI of my project:
 
 ![App Screenshot](screenshots/app_ui.png)
-```
 
+---
 ### Example Result
 
 ```
