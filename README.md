@@ -27,29 +27,14 @@ It demonstrates integration of:
 
 ### Resume Ranking Interface
 
-Add screenshots of your UI here after running the project.
+Here is the screenshot of the UI of my project :
 
 ```
 Example:
 
-<img width="521" height="424" alt="image" src="https://github.com/user-attachments/assets/53b922fe-0576-4905-8fdf-c7ce28ed7033" />
+![App Screenshot](screenshots/app_ui.png)
 
-```
 
-### Example Result
-
-```
-Rank 1 : John_Doe.pdf
-Score  : 0.87
-
-Rank 2 : Jane_Smith.pdf
-Score  : 0.74
-
-Rank 3 : Alex_Kumar.pdf
-Score  : 0.62
-```
-
----
 
 # 🚀 Features
 
