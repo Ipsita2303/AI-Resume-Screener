@@ -30,7 +30,6 @@ It demonstrates integration of:
 Here is the screenshot of the UI of my project :
 
 ```
-Example:
 
 ![App Screenshot](screenshots/app_ui.png)
 ```
