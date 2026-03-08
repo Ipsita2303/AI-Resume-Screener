@@ -1,13 +1,15 @@
 # 🤖 AI Resume Screening System
 
 ![Python](https://img.shields.io/badge/Python-3.9+-blue.svg)
-![FastAPI](https://img.shields.io/badge/FastAPI-API-green)
+![FastAPI](https://img.shields.io/badge/FastAPI-Backend-green)
 ![NLP](https://img.shields.io/badge/NLP-SentenceTransformers-orange)
 ![License](https://img.shields.io/badge/License-MIT-lightgrey)
 
-## 📌 Project Overview
+---
 
-The **AI Resume Screening System** is a full‑stack web application designed to help recruiters automatically analyze and rank resumes based on their relevance to a given job description.
+# 📌 Project Overview
+
+The **AI Resume Screening System** is a full‑stack web application that helps recruiters automatically analyze and rank resumes based on their relevance to a given job description.
 
 The system uses **Natural Language Processing (NLP)** and **semantic similarity techniques** to compare candidate resumes with job requirements and generate a ranked list of candidates.
 
@@ -15,35 +17,23 @@ This project simulates a simplified **Applicant Tracking System (ATS)** used by 
 
 It demonstrates integration of:
 
-* Frontend development (HTML, CSS, JavaScript)
+* Frontend development (**HTML, CSS, JavaScript**)
 * Backend API development using **FastAPI**
 * **NLP embeddings** for resume similarity
-* PDF resume parsing
-* Client‑server communication
+* **PDF resume parsing**
+* Client–server communication
 
 ---
 
 # 🖥️ Demo
 
-### Resume Ranking Interface
+## Resume Ranking Interface
 
-Here is the screenshot of the UI of my project:
+Here is the screenshot of the UI of the project:
 
-![App Screenshot](screenshots/app_ui.png)
-
----
-### Example Result
-
-```
-Rank 1 : John_Doe.pdf
-Score  : 0.87
-
-Rank 2 : Jane_Smith.pdf
-Score  : 0.74
-
-Rank 3 : Alex_Kumar.pdf
-Score  : 0.62
-```
+<p align="center">
+  <img src="screenshots/app_ui.png" width="850">
+</p>
 
 ---
 
@@ -55,50 +45,50 @@ Upload one or multiple resumes in **PDF format**.
 
 ### 📝 Job Description Input
 
-Enter a job description or required skills for a role.
+Recruiters can enter a job description or role requirements.
 
-### 🧠 AI-Based Resume Analysis
+### 🧠 AI‑Based Resume Analysis
 
-Uses **Sentence Transformers** to convert text into semantic embeddings.
+Uses **Sentence Transformers** to convert resume and job description text into semantic embeddings.
 
 ### 📊 Automatic Candidate Ranking
 
-Resumes are ranked based on similarity with the job description.
+Resumes are ranked based on **semantic similarity scores**.
 
 ### 📈 Clean Dashboard Interface
 
-Results are displayed in a simple and readable UI.
+Results are displayed in a simple and readable UI showing candidate ranking and match score.
 
 ---
 
 # 🏗️ System Architecture
 
 ```
-            +-------------------+
-            |   Frontend UI     |
-            | HTML / CSS / JS   |
-            +---------+---------+
-                      |
-                      |
-                      v
-            +-------------------+
-            |    FastAPI API    |
-            |  Backend Server   |
-            +---------+---------+
-                      |
-                      |
-                      v
-            +-------------------+
-            |   NLP Processing  |
-            | SentenceTransform |
-            +---------+---------+
-                      |
-                      |
-                      v
-            +-------------------+
-            | Resume Ranking    |
-            | Similarity Score  |
-            +-------------------+
+        +----------------------+
+        |     Frontend UI      |
+        |  HTML / CSS / JS    |
+        +----------+-----------+
+                   |
+                   |
+                   v
+        +----------------------+
+        |     FastAPI API      |
+        |    Backend Server    |
+        +----------+-----------+
+                   |
+                   |
+                   v
+        +----------------------+
+        |     NLP Model        |
+        | SentenceTransformers |
+        +----------+-----------+
+                   |
+                   |
+                   v
+        +----------------------+
+        |   Resume Ranking     |
+        | Similarity Scoring   |
+        +----------------------+
 ```
 
 ---
@@ -134,7 +124,7 @@ AI-Resume-Screener
 │
 ├── backend
 │   ├── main.py
-│   ├── requirements.txt
+│   └── requirements.txt
 │
 ├── frontend
 │   ├── index.html
@@ -162,28 +152,30 @@ cd AI-Resume-Screener
 
 ## 2️⃣ Install Dependencies
 
+Install required Python libraries:
+
 ```
-pip install -r requirements.txt
+pip install -r backend/requirements.txt
 ```
 
 ---
 
 ## 3️⃣ Run the Backend Server
 
-Navigate to the backend folder:
+Navigate to the backend folder and start the FastAPI server:
 
 ```
 cd backend
 uvicorn main:app --reload
 ```
 
-Server will run at:
+The API will run at:
 
 ```
 http://127.0.0.1:8000
 ```
 
-API Documentation (Swagger UI):
+Interactive API documentation:
 
 ```
 http://127.0.0.1:8000/docs
@@ -193,26 +185,43 @@ http://127.0.0.1:8000/docs
 
 ## 4️⃣ Run the Frontend
 
-Open the frontend file in your browser:
+Open the frontend page in your browser:
 
 ```
 frontend/index.html
 ```
 
-Upload resumes and enter a job description to start ranking.
+Upload resumes and enter a job description to analyze candidates.
+
+---
+
+# 📊 Example Output
+
+Example ranking result:
+
+```
+Rank 1 : Candidate_A.pdf
+Score  : 0.87
+
+Rank 2 : Candidate_B.pdf
+Score  : 0.74
+
+Rank 3 : Candidate_C.pdf
+Score  : 0.62
+```
 
 ---
 
 # 📊 Example Workflow
 
-1. User enters a **job description**.
-2. User uploads multiple **candidate resumes**.
-3. Frontend sends data to the **FastAPI backend**.
-4. Backend extracts text from the uploaded PDFs.
-5. NLP model converts text to **embeddings**.
-6. **Cosine similarity** compares resume with job description.
-7. Candidates are **ranked by relevance score**.
-8. Results are returned and displayed in the UI.
+1. The recruiter enters a **job description**.
+2. Multiple **candidate resumes** are uploaded.
+3. The frontend sends the data to the **FastAPI backend**.
+4. Backend extracts text from PDF resumes.
+5. The NLP model converts text to **vector embeddings**.
+6. **Cosine similarity** compares resume embeddings with job description embeddings.
+7. Candidates are **ranked by similarity score**.
+8. Results are displayed in the frontend dashboard.
 
 ---
 
@@ -222,19 +231,19 @@ This system can be used for:
 
 * Resume shortlisting for recruiters
 * Applicant Tracking Systems (ATS)
-* HR automation platforms
-* AI-powered hiring tools
+* HR automation tools
+* AI‑powered recruitment platforms
 * Talent analytics systems
 
 ---
 
 # 🔮 Future Improvements
 
-Potential enhancements for this project:
+Potential enhancements include:
 
 * 🔎 Skill extraction from resumes
 * 📉 Missing skills detection
-* 📊 Visualization dashboards (charts & analytics)
+* 📊 Visualization dashboards with charts
 * 🤖 AI feedback for candidates
 * ☁️ Cloud deployment
 * 📄 Support for DOCX resumes
@@ -244,12 +253,12 @@ Potential enhancements for this project:
 
 # 📚 Learning Outcomes
 
-This project demonstrates knowledge of:
+Through this project, the following concepts are demonstrated:
 
 * Full‑stack web development
-* REST API development
+* REST API design
 * Natural Language Processing
 * Transformer embeddings
 * File parsing and processing
-* Client‑server architecture
+* Client–server architecture
 
