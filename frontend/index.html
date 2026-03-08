@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<title>AI Resume Screener</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<h1>AI Resume Screening System</h1>
+
+<div class="container">
+
+<h3>Enter Job Description</h3>
+<textarea id="jobDesc"></textarea>
+
+<h3>Upload Resumes</h3>
+<input type="file" id="resumes" multiple>
+
+<br><br>
+
+<button onclick="rankResumes()">Analyze Candidates</button>
+
+</div>
+
+<h2>Ranking Results</h2>
+<div id="results"></div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
