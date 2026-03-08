@@ -33,8 +33,22 @@ Here is the screenshot of the UI of my project :
 Example:
 
 ![App Screenshot](screenshots/app_ui.png)
+```
 
+### Example Result
 
+```
+Rank 1 : John_Doe.pdf
+Score  : 0.87
+
+Rank 2 : Jane_Smith.pdf
+Score  : 0.74
+
+Rank 3 : Alex_Kumar.pdf
+Score  : 0.62
+```
+
+---
 
 # 🚀 Features
 
@@ -241,7 +255,4 @@ This project demonstrates knowledge of:
 * Transformer embeddings
 * File parsing and processing
 * Client‑server architecture
-
----
-
 
